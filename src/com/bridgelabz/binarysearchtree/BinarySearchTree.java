@@ -41,5 +41,42 @@ private MyBinaryNode<K> root;
 
 		}
 	}
+	
+	public void preOrder() {
+
+		preOrderRec(this.root);
+	}
+
+	private void preOrderRec(MyBinaryNode<K> root2) {
+		
+		if (root != null) {
+
+			System.out.println(root.key);
+
+			inOrderRec(root.left);
+			inOrderRec(root.right);
+
+		}
+
+	}
+
+	public void postOrder() {
+
+		postOrderRec(this.root);
+	}
+
+	private void postOrderRec(MyBinaryNode<K> root2) {
+		
+		if (root != null) {
+
+			System.out.println(root.key);
+
+			inOrderRec(root.left);
+			inOrderRec(root.right);
+			System.out.println(root.key);
+
+		}
+
+	}
 
 }
